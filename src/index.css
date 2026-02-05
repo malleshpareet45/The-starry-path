@@ -1,0 +1,10 @@
+/* Global styles and resets */
+@import './styles/theme.css';
+@import './styles/components.css';
+
+/* Add your global styles here */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

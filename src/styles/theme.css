@@ -1,0 +1,18 @@
+:root {
+  /* Colors from Style Guide.pdf */
+  --primary-color: #007bff; /* Example */
+  --secondary-color: #6c757d;
+  --background-color: #ffffff;
+  --text-color: #333333;
+  
+  /* Typography */
+  --font-family-base: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
