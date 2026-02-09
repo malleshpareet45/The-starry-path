@@ -1,0 +1,109 @@
+/* Home Page Global */
+.home-page {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-bg);
+}
+
+.hero-banner {
+    width: 80%;
+    /* Reduced width to prevent taking full screen */
+    max-width: 1000px;
+    /* Max cap for larger screens */
+    height: auto;
+    object-fit: contain;
+    /* Ensure it doesn't stretch */
+    margin-top: 0;
+    /* Minimized spacing */
+    display: block;
+}
+
+/* Sections Common */
+.section {
+    padding: 75px 1rem;
+    /* 75px top + 75px bottom = 150px total space if stuck together, or visually balancing */
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: var(--color-purple);
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+
+/* Scale Section */
+.scale-section {
+    text-align: center;
+}
+
+.scale-container {
+    /* TODO: Implement scale layout */
+    margin: 2rem 0;
+}
+
+/* Star Section */
+.star-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+/* Inner Stars Section */
+
+/* Inner Stars Section */
+.inner-stars-section {
+    /* Layout */
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+/* Difference Section */
+.difference-section {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    padding: 4rem;
+    border-radius: 20px;
+    margin: 4rem auto;
+}
+
+/* Big Ideas Section */
+.big-ideas-section {
+    position: relative;
+    padding: 4rem 0;
+}
+
+.big-ideas-image {
+    width: 100%;
+    height: auto;
+}
+
+/* Star Keepers */
+.star-keepers-section {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    padding: 4rem 1rem;
+    border-radius: 20px;
+}
+
+.star-keeper-card {
+    background: #f9f9f9;
+    border-radius: 200px 200px 20px 20px;
+    /* Umbrella shape attempt */
+    padding: 3rem;
+    max-width: 400px;
+    margin: 0 auto;
+    color: var(--color-text);
+    text-align: center;
+    border: 1px solid #eeeeee;
+}

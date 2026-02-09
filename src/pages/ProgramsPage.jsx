@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
+// Import Components
+import ProgramsHero from '../components/Programs/ProgramsHero';
+import InnerStarsProgram from '../components/Programs/InnerStarsProgram';
+import LearningStarsProgram from '../components/Programs/LearningStarsProgram';
+import ProgramComparison from '../components/Programs/ProgramComparison';
+import ProgramCTA from '../components/Programs/ProgramCTA';
 
 const ProgramsPage = () => {
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: true });
+    }, []);
+
     return (
-        <div className="programs-page">
-            <h1>TSP Programs</h1>
-            {/* Content from TSP Programs.pdf */}
+        <div className="w-full bg-[var(--color-bg)]">
+            <ProgramsHero />
+            <InnerStarsProgram />
+            <LearningStarsProgram />
+            <ProgramComparison />
+            <ProgramCTA />
         </div>
     );
 };

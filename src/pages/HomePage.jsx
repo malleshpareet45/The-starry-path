@@ -1,10 +1,31 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import '../styles/home.css';
+import Hero from '../components/Home/Hero';
+import ScaleSection from '../components/Home/ScaleSection';
+import StarSection from '../components/Home/StarSection';
+import StrengthsSection from '../components/Home/StrengthsSection';
+import InnerStarsSection from '../components/Home/InnerStarsSection';
+import DifferenceSection from '../components/Home/DifferenceSection';
+import BigIdeasSection from '../components/Home/BigIdeasSection';
+import StarKeepersSection from '../components/Home/StarKeepersSection';
 
 const HomePage = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true });
+  }, []);
+
   return (
     <div className="home-page">
-      <h1>TSP Homepage</h1>
-      {/* Content from TSP Homepage.pdf */}
+      <Hero />
+      <ScaleSection />
+      <StarSection />
+      <StrengthsSection />
+      <InnerStarsSection />
+      <DifferenceSection />
+      <BigIdeasSection />
+      <StarKeepersSection />
     </div>
   );
 };

@@ -1,0 +1,68 @@
+import React from "react";
+import LastCurve from "../assets/images/Homepage/Asset 1.svg";
+import "../styles/components.css";
+
+const ExploreSection = () => {
+    return (
+        <section className="explore-section">
+            <div className="footer-wave-container">
+
+                {/* 🌊 Background Wave */}
+                <img
+                    src={LastCurve}
+                    alt="Wave"
+                    className="footer-wave-bg"
+                />
+
+                {/* ✨ Text Flow SVG - Centered in Gold Ribbon */}
+                <svg
+                    viewBox="0 0 1441.18 456.18"
+                    className="wave-text-overlay"
+                    preserveAspectRatio="xMidYMid meet"
+                >
+                    <defs>
+                        {/* 🟡 SINGLE TOP EDGE PATH (High Fidelity Restoration with extended right entry) */}
+                        <path
+                            id="goldWavePath"
+                            d="M-27.63,313.36c29.54,14.35,59.5,29.84,91.9,36.58,33.3,6.93,66.53,2.68,97.22-11.95,56.23-26.81,93.28-80.69,147.29-111.05,52.42-29.47,115.4-40.74,174.82-31.41,28.09,4.41,55.12,13.3,80.37,26.33,22.4,11.56,43.45,25.55,64.16,39.86,40.64,28.07,81.11,58.99,128.63,74.49,22.92,7.48,47.4,10.7,71.43,8.07,29.73-3.25,57.91-14.21,83.31-29.79,28.95-17.75,54.3-40.55,82.23-59.76,25.89-17.81,55.65-34.08,87.81-35.07,55.12-1.68,89.1,46.44,113.32,89.42,12.89,22.88,27.7,45.96,47.94,63.07,20.92,17.68,46.22,26.47,73.59,22.28,16.75-2.56,32.63-9.1,48.59-14.49,12.79-4.32,26.58-7.77,39.05-9.17,25.26-2.83,51.44-2.78,76.34,2.68,13.45,2.95,26.39,7.51,38.24,14.58"
+                            fill="none"
+                        />
+                    </defs>
+
+                    {/* 📝 Flowing Text - Enhanced 'moving effect' with faster duration and wider spacing */}
+                    <text
+                        className="wave-text"
+                        dominantBaseline="middle"
+                        dy="-60"
+                        textAnchor="middle"
+                        style={{ fontFamily: 'var(--font-body), sans-serif', fontSize: '30px', fontWeight: '800', letterSpacing: '4px' }}
+                    >
+                        <textPath href="#goldWavePath" startOffset="0%">
+                            {[...Array(20)].map(() => (
+                                "Learning that goes beyond the classroom  •  The habits of mind that build character  •  Build them early. Build them with intention.  •  "
+                            )).join('')}
+
+                            <animate
+                                attributeName="startOffset"
+                                from="-100%"
+                                to="0%"
+                                dur="25s"
+                                repeatCount="indefinite"
+                                calcMode="linear"
+                            />
+                        </textPath>
+                    </text>
+
+                </svg>
+
+                {/* 🔘 Button */}
+                <button className="footer-wave-button">
+                    EXPLORE THE STARRY PATH SYSTEM
+                </button>
+
+            </div>
+        </section>
+    );
+};
+
+export default ExploreSection;

@@ -1,0 +1,254 @@
+/* Programs Page Styles */
+.programs-page {
+    width: 100%;
+    background-color: var(--color-bg);
+}
+
+.programs-hero {
+    background-color: #0A1F44;
+    /* Dark Navy from image */
+    color: white;
+    padding: 4rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    border-radius: 0 0 40px 40px;
+}
+
+.programs-hero-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+}
+
+.programs-hero-image {
+    flex: 1;
+}
+
+.programs-hero-image img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+}
+
+.programs-hero-text {
+    flex: 1.2;
+}
+
+.programs-hero-text h1 {
+    font-size: 2.5rem;
+    color: #F5A623;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.programs-hero-text h2 {
+    font-size: 2rem;
+    color: #4DB6AC;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.programs-hero-text p {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 500px;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Banner styles */
+.program-banner {
+    width: 100%;
+    padding: 1.5rem;
+    color: white;
+    font-size: 1.8rem;
+    font-family: var(--font-heading);
+    text-align: center;
+    text-transform: uppercase;
+    margin: 3rem 0;
+}
+
+.banner-orange {
+    background-color: #E65100;
+}
+
+.banner-navy {
+    background-color: #0A1F44;
+}
+
+/* Program Cards */
+.program-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.program-visual {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.program-visual img {
+    width: 250px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.program-visual h3 {
+    font-size: 1.5rem;
+    color: #0A1F44;
+}
+
+.program-info {
+    flex: 1.5;
+}
+
+.program-info h3 {
+    font-size: 1.8rem;
+    color: #0A1F44;
+    margin-bottom: 1.5rem;
+}
+
+.program-info p {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #4A4A4A;
+}
+
+.program-info ul {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.program-info li {
+    font-family: var(--font-body);
+    padding: 0.4rem 0;
+    position: relative;
+    padding-left: 1.5rem;
+    color: #4A4A4A;
+}
+
+.program-info li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #F5A623;
+    font-weight: bold;
+}
+
+.btn-learn {
+    background: linear-gradient(90deg, #E91E63 0%, #673AB7 100%);
+    color: white;
+    border: none;
+    padding: 0.8rem 2.5rem;
+    border-radius: 12px;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+/* Comparison Section */
+.comparison-section {
+    max-width: 1200px;
+    margin: 5rem auto;
+    text-align: center;
+}
+
+.comparison-grid {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0;
+    /* Connected boxes */
+    margin: 3rem 0;
+}
+
+.comparison-box {
+    flex: 1;
+    padding: 4rem 2rem;
+    color: white;
+    position: relative;
+}
+
+.box-orange {
+    background-color: #E65100;
+    border-radius: 20px 0 0 20px;
+}
+
+.box-navy {
+    background-color: #0A1F44;
+    border-radius: 0 20px 20px 0;
+}
+
+.comparison-divider {
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: #E65100;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+.comparison-table {
+    margin: 4rem auto;
+    max-width: 800px;
+}
+
+.table-row {
+    border-bottom: 1px solid #ddd;
+    padding: 1.5rem 0;
+}
+
+.table-row-title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: #0A1F44;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.table-row-item {
+    font-family: var(--font-body);
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+/* Page Wave */
+.program-page-wave {
+    width: 100%;
+    margin: 4rem 0;
+}
+
+@media (max-width: 768px) {
+
+    .programs-hero-container,
+    .program-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .comparison-grid {
+        flex-direction: column;
+    }
+
+    .box-orange,
+    .box-navy {
+        border-radius: 20px;
+    }
+}

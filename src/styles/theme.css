@@ -1,18 +1,58 @@
 :root {
-  /* Colors from Style Guide.pdf */
-  --primary-color: #007bff; /* Example */
-  --secondary-color: #6c757d;
-  --background-color: #ffffff;
-  --text-color: #333333;
-  
-  /* Typography */
-  --font-family-base: 'Inter', sans-serif;
+  /* Colors */
+  --color-orange: #F5A623;
+  --color-pink: #E91E63;
+  --color-purple: #673AB7;
+  --color-blue: #03A9F4;
+  --color-green: #8BC34A;
+
+  --color-bg: #FFFFFF;
+  --color-text: #333333;
+
+  /* Fonts */
+  --font-heading: 'Chewy', cursive;
+  --font-body: 'Quicksand', sans-serif;
+  --font-accent: 'Nunito', sans-serif;
 }
 
 body {
-  font-family: var(--font-family-base);
-  background-color: var(--background-color);
-  color: var(--text-color);
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
   margin: 0;
   padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+/* Modern Scrollbar Styles */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bbbbbb;
+  border-radius: 10px;
+  border: 2px solid var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999999;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #bbbbbb var(--color-bg);
 }

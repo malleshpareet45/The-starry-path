@@ -1,16 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/components.css';
+import Logo from '../assets/images/Logo/Logo.svg';
 
 const Header = () => {
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
     return (
         <header className="header">
-            <nav>
-                <ul>
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/programs">Programs</Link></li>
-                </ul>
-            </nav>
+            <div className="header-container">
+                <Link to="/" className="logo-container">
+                    <img src={Logo} alt="The Starry Path" className="logo" />
+                </Link>
+
+                {/* Hamburger Toggle */}
+                <button
+                    className={`nav-toggle ${isMenuOpen ? 'open' : ''}`}
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    aria-label="Toggle menu"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
+                    <ul>
+                        <li><Link to="/story" onClick={() => setIsMenuOpen(false)}>Story</Link></li>
+                        <li><Link to="/programs" onClick={() => setIsMenuOpen(false)}>Programs</Link></li>
+                        <li><Link to="/resources" onClick={() => setIsMenuOpen(false)}>Resources</Link></li>
+                        <li className="mobile-cta">
+                            <button className="btn-join">Book now</button>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div className="cta-container">
+                    <button className="btn-join">Book now</button>
+                </div>
+            </div>
         </header>
     );
 };
