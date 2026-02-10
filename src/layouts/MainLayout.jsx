@@ -9,10 +9,17 @@ import { useLocation } from 'react-router-dom';
 const MainLayout = ({ children }) => {
     const location = useLocation();
     // Default to true on initial load
-    const [loading, setLoading] = useState(true);
+    // Default to true on initial load, unless on /programs
+    const [loading, setLoading] = useState(location.pathname !== '/programs');
     const showExploreSection = location.pathname !== '/programs';
 
     useEffect(() => {
+        // specific check for programs page to avoid loader
+        if (location.pathname === '/programs') {
+            setLoading(false);
+            return;
+        }
+
         // Trigger loading on mount and route change
         setLoading(true);
         const timer = setTimeout(() => {
