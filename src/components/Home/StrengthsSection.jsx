@@ -61,7 +61,7 @@ const StrengthsSection = () => {
                 {strengths.map((s, index) => (
                     <div
                         key={index}
-                        className="flip-card mx-auto w-full max-w-[350px]"
+                        className="flip-card mx-auto w-full max-w-[320px] px-2"
                         style={{ perspective: '1000px' }}
                     >
                         <div className="flip-card-inner relative w-full h-full transition-transform duration-700 ease-in-out" style={{ transformStyle: 'preserve-3d' }}>

@@ -50,12 +50,13 @@ const InnerStarsSection = () => {
                 </div>
             </div>
 
-            {/* Bottom Content - Tangle & Text (Perfected breakout) */}
-            <div className="w-screen relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] mt-12 overflow-hidden" data-aos="fade-up">
+            {/* Breakout Tangle Image - Using overflow-hidden on a 100% width container */}
+            <div className="w-full mt-12 overflow-hidden" data-aos="fade-up">
                 <img
                     src={Tangle}
                     alt="Decorative Tangle"
-                    className="w-[112%] max-w-none ml-[-5%] h-auto block"
+                    className="w-full h-auto block"
+                    style={{ transform: 'scale(1.1)' }}
                 />
             </div>
         </section>

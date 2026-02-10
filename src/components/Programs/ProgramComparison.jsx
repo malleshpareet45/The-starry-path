@@ -8,18 +8,18 @@ const ProgramComparison = () => {
                 WHICH PROGRAM IS RIGHT FOR YOUR CHILD?
             </h2>
 
-            <div className="flex flex-col items-center justify-center my-12" data-aos="zoom-in">
+            <div className="w-full max-w-4xl mx-auto flex flex-col items-center justify-center my-8 md:my-12 px-4" data-aos="zoom-in">
                 <img
                     src={PuzzleImg}
                     alt="Inner Stars vs Learning Stars Comparison"
-                    className="w-full max-w-[900px] h-auto mb-2"
+                    className="w-full h-auto mb-2"
                 />
-                <svg width="900" height="80" viewBox="0 0 900 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full max-w-[900px] text-gray-500">
+                <svg viewBox="0 0 900 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full text-gray-400 opacity-60">
                     <path d="M10,10 Q10,50 50,50 H425 Q450,50 450,80 Q450,50 475,50 H850 Q890,50 890,10" stroke="currentColor" strokeWidth="3" strokeLinecap="round" fill="none" />
                 </svg>
             </div>
 
-            <div className="max-w-3xl mx-auto my-8 divide-y divide-gray-200 border-t border-gray-200" data-aos="fade-up">
+            <div className="w-full max-w-3xl mx-auto my-8 divide-y divide-gray-200 border-t border-gray-200" data-aos="fade-up">
                 <div className="py-6">
                     <h5 className="text-xl font-[var(--font-heading)] text-[#0A1F44] uppercase">SOME CHILDREN BENEFIT FROM BOTH</h5>
                 </div>
