@@ -25,12 +25,12 @@ const ScaleSection = () => {
     const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
 
     return (
-        <section className="py-20 md:py-24 px-4 max-w-[1400px] mx-auto text-center relative min-h-[85vh] flex flex-col justify-center">
-            <h2 className="text-[#0d2b45] font-[var(--font-heading)] text-3xl md:text-5xl mb-20 uppercase tracking-wide" data-aos="fade-up">
+        <section className="py-12 md:py-20 px-4 max-w-[1400px] mx-auto text-center relative min-h-[60vh] md:min-h-[85vh] flex flex-col justify-center">
+            <h2 className="text-[#0d2b45] font-[var(--font-heading)] text-3xl md:text-5xl mb-8 md:mb-16 uppercase tracking-wide" data-aos="fade-up">
                 ACADEMICS + LIFE SKILLS = REAL EDUCATION
             </h2>
 
-            <div className="relative w-full max-w-[1000px] mx-auto min-h-[450px] md:min-h-[500px] flex items-end justify-center mb-0" data-aos="zoom-in">
+            <div className="relative w-full max-w-[1000px] mx-auto min-h-[300px] md:min-h-[500px] flex items-end justify-center mb-0" data-aos="zoom-in">
 
                 {/* Slides */}
                 {slides.map((slide, index) => (

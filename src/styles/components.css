@@ -147,6 +147,46 @@
     .cta-container {
         display: none;
     }
+
+    .content {
+        padding-top: 80px;
+        /* Reduced from 100px for mobile */
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .footer-acknowledgment {
+        text-align: center;
+    }
+
+    .wave-text-overlay {
+        height: auto;
+        min-height: auto;
+        top: 20%;
+    }
+
+    .wave-text {
+        font-size: 14px;
+        /* Significantly reduce font size */
+        letter-spacing: 0.05em;
+    }
+
+    .footer-wave-button {
+        margin: -1rem auto 2rem;
+        /* Adjusted to create better spacing */
+        padding: 1rem 2rem;
+        font-size: 0.9rem;
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .programs-page {
+        padding: 1rem;
+    }
 }
 
 .btn-join {
@@ -344,18 +384,6 @@
     text-align: left;
 }
 
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        gap: 2rem;
-        text-align: center;
-    }
-
-    .footer-acknowledgment {
-        text-align: center;
-    }
-}
-
 /* Layout Styles */
 .main-layout {
     display: flex;
@@ -379,69 +407,42 @@
     margin: 0 auto;
 }
 
+/* Mobile Fixes - ensure these are at the end to override other styles */
+@media (max-width: 768px) {
+    .footer-wave-button {
+        margin: -1rem auto 2rem !important;
+        padding: 1rem 2rem;
+        font-size: 0.9rem;
+        width: 80%;
+        max-width: 300px;
+    }
 
-.footer-wave-container {
-    position: relative;
-    width: 100vw;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    overflow: hidden;
-    line-height: 0;
-    padding: 0;
-}
+    .wave-text {
+        font-size: 14px;
+        letter-spacing: 0.05em;
+    }
 
-.footer-wave-bg {
-    width: 105%;
-    min-width: 105vw;
-    height: auto;
-    display: block;
-    margin-left: -2.5%;
-    position: relative;
-    z-index: 1;
-}
+    .wave-text-overlay {
+        height: 100%;
+        min-height: auto;
+        top: 0;
+    }
 
-.wave-text-overlay {
-    position: absolute;
-    top: 0;
-    left: -2.5%;
-    width: 105%;
-    height: 100%;
-    z-index: 2;
-    pointer-events: none;
-}
+    .footer-container {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
 
-.wave-text {
-    font-family: var(--font-heading), sans-serif;
-    font-weight: 800;
-    font-size: 28px;
-    fill: white;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-}
+    .footer-acknowledgment {
+        text-align: center;
+    }
 
-.footer-wave-button {
-    display: block;
-    margin: -3rem auto 2rem;
-    background: linear-gradient(90deg, #E91E63 0%, #673AB7 100%);
-    color: white;
-    border: none;
-    padding: 1.5rem 3.5rem;
-    border-radius: 12px;
-    font-family: var(--font-heading);
-    font-size: 1.1rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 10px rgba(103, 58, 183, 0.3);
-    position: relative;
-    z-index: 10;
-}
+    .programs-page {
+        padding: 1rem;
+    }
 
-.footer-wave-button:hover {
-    background: linear-gradient(90deg, #8BC34A 0%, #03A9F4 100%);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(3, 169, 244, 0.4);
+    .explore-section {
+        display: none;
+    }
 }

@@ -35,7 +35,6 @@ const ExploreSection = () => {
                         dominantBaseline="middle"
                         dy="-60"
                         textAnchor="middle"
-                        style={{ fontFamily: 'var(--font-body), sans-serif', fontSize: '30px', fontWeight: '800', letterSpacing: '4px' }}
                     >
                         <textPath href="#goldWavePath" startOffset="0%">
                             {[...Array(20)].map(() => (

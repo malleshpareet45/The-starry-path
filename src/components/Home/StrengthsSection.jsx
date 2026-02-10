@@ -49,19 +49,19 @@ const StrengthsSection = () => {
     ];
 
     return (
-        <section className="py-20 px-4 max-w-[1200px] mx-auto text-center">
-            <h2 className="text-[2rem] md:text-[2.5rem] text-[var(--color-primary-blue)] mb-4 uppercase font-[var(--font-heading)] leading-tight" data-aos="fade-up">
+        <section className="py-12 md:py-20 px-4 max-w-[1200px] mx-auto text-center">
+            <h2 className="text-2xl md:text-[2.5rem] text-[var(--color-primary-blue)] mb-4 uppercase font-[var(--font-heading)] leading-tight" data-aos="fade-up">
                 SIX ESSENTIAL STRENGTHS<br />THAT SHAPE CHARACTER
             </h2>
-            <p className="text-lg text-gray-600 mb-12 font-[var(--font-accent)]" data-aos="fade-up" data-aos-delay="100">
+            <p className="text-base md:text-lg text-gray-600 mb-8 md:mb-12 font-[var(--font-accent)]" data-aos="fade-up" data-aos-delay="100">
                 Values of life that define thoughts and actions.
             </p>
 
-            <div className="grid grid-cols-3 gap-6 mb-12" data-aos="fade-up" data-aos-delay="200">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12" data-aos="fade-up" data-aos-delay="200">
                 {strengths.map((s, index) => (
                     <div
                         key={index}
-                        className="flip-card h-[240px]"
+                        className="flip-card h-[200px] md:h-[240px] mx-auto w-full max-w-[350px]"
                         style={{ perspective: '1000px' }}
                     >
                         <div className="flip-card-inner relative w-full h-full transition-transform duration-700 ease-in-out" style={{ transformStyle: 'preserve-3d' }}>
@@ -73,13 +73,13 @@ const StrengthsSection = () => {
                                 <img
                                     src={s.img}
                                     alt={s.title}
-                                    className="w-full h-full object-contain"
+                                    className="w-full h-full object-contain p-4"
                                 />
                             </div>
 
                             {/* Back of card */}
                             <div
-                                className="flip-card-back absolute w-full h-full flex flex-col items-center justify-center p-6 rounded-2xl text-white"
+                                className="flip-card-back absolute w-full h-full flex flex-col items-center justify-center p-6 rounded-2xl text-white shadow-lg"
                                 style={{
                                     backfaceVisibility: 'hidden',
                                     WebkitBackfaceVisibility: 'hidden',
@@ -87,16 +87,19 @@ const StrengthsSection = () => {
                                     backgroundColor: s.bgColor
                                 }}
                             >
-                                <p className="text-lg font-[var(--font-heading)] whitespace-pre-line leading-relaxed">
-                                    {s.description}
-                                </p>
+                                <div className="text-center">
+                                    <h3 className="text-xl font-bold font-[var(--font-heading)]">{s.description.split('\n')[0]}</h3>
+                                    <p className="text-sm md:text-base font-[var(--font-body)] leading-relaxed mt-2">
+                                        {s.description.split('\n')[1] || ""}
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 ))}
             </div>
 
-            <button className="btn-join uppercase" style={{ padding: '1rem 3rem', fontSize: '1.4rem' }} data-aos="zoom-in" data-aos-offset="100">
+            <button className="btn-join uppercase text-sm md:text-xl px-6 py-3 md:px-12 md:py-4" data-aos="zoom-in" data-aos-offset="100">
                 HELP YOUR CHILD BUILD LIFELONG STRENGTHS
             </button>
 
