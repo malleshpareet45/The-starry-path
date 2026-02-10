@@ -9,19 +9,17 @@
     display: flex;
     justify-content: center;
     background-color: var(--color-bg);
+    padding: 2rem 5%;
+    /* Adds margin on left and right */
 }
 
 .hero-banner {
-    width: 80%;
-    /* Reduced width to prevent taking full screen */
-    max-width: 1000px;
-    /* Max cap for larger screens */
+    width: 100%;
+    max-width: 960px;
     height: auto;
     object-fit: contain;
-    /* Ensure it doesn't stretch */
-    margin-top: 0;
-    /* Minimized spacing */
     display: block;
+    margin: 0 auto;
 }
 
 /* Sections Common */
@@ -29,7 +27,7 @@
     padding: 75px 1rem;
     /* 75px top + 75px bottom = 150px total space if stuck together, or visually balancing */
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: 1100px;
     text-align: center;
 }
 
@@ -120,15 +118,17 @@
     }
 
     .hero-section {
-        padding: 2rem 0;
+        padding: 2rem 5%;
+        /* Increased horizontal margin for tablet/mobile */
         min-height: auto;
     }
 
     .hero-banner {
         width: 100%;
         max-width: 100%;
-        margin-top: 1rem;
-        padding: 0 1rem;
+        margin-top: 0.5rem;
+        padding: 0;
+        /* Removing inner padding to use section padding instead */
     }
 
     .star-section {

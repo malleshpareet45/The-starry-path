@@ -4,7 +4,7 @@ import InnerStarsImg from '../../assets/images/Programs/Inner Stars.svg';
 const InnerStarsProgram = () => {
     return (
         <>
-            <div className="max-w-[1280px] mx-4 md:mx-auto mt-12 mb-8" data-aos="fade-up">
+            <div className="max-w-[1280px] mx-4 md:mx-10 xl:mx-auto mt-12 mb-8" data-aos="fade-up">
                 <div className="w-full py-4 md:py-6 bg-[#E65100] text-white text-lg md:text-3xl font-[var(--font-heading)] text-center uppercase rounded-[20px] md:rounded-[40px] shadow-2xl px-4 flex items-center justify-center">
                     Life skills for every child. Ages 5-12.
                 </div>
