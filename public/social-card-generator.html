@@ -4,39 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Media Card Templates</title>
+    <title>Download Your Social Card</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <style>
         body {
             margin: 0;
-            padding: 40px;
-            background-color: #f0f0f0;
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 40px;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            font-family: 'Segoe UI', sans-serif;
         }
 
-        .card-container {
-            position: relative;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-            transition: transform 0.2s;
+        .card-wrapper {
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
         }
 
-        .card-container:hover {
-            transform: scale(1.01);
-        }
-
-        .label {
-            margin-bottom: 10px;
-            color: #555;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-align: center;
-        }
-
-        /* Common Card Size for FB/LinkedIn/Twitter Large */
+        /* DESIGN 2: Editorial / Professional (Light) */
         .card {
             width: 1200px;
             height: 630px;
@@ -45,71 +33,16 @@
             position: relative;
             display: flex;
             box-sizing: border-box;
-        }
-
-        /* DESIGN 1: Centered Brand (Purple) */
-        .design-1 {
-            background: radial-gradient(circle at top right, #6a3abf 0%, #512DA8 100%);
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-        }
-
-        .design-1 .bg-pattern {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            opacity: 0.1;
-            background-image: radial-gradient(#FFC107 2px, transparent 2px);
-            background-size: 30px 30px;
-        }
-
-        .design-1 img {
-            width: 400px;
-            margin-bottom: 30px;
-            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
-            z-index: 2;
-        }
-
-        .design-1 h1 {
-            font-size: 48px;
-            margin: 0;
-            max-width: 900px;
-            line-height: 1.2;
-            z-index: 2;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-        }
-
-        .design-1 .domain {
-            margin-top: 30px;
-            font-size: 24px;
-            color: #FFC107;
-            /* Gold */
-            font-weight: 600;
-            z-index: 2;
-            padding: 10px 30px;
-            border: 2px solid #FFC107;
-            border-radius: 50px;
-            text-transform: lowercase;
-        }
-
-        /* DESIGN 2: Clean Split (White) */
-        .design-2 {
-            background: white;
             flex-direction: row;
         }
 
-        .design-2 .left-bar {
+        .card .left-bar {
             width: 40px;
             height: 100%;
             background: #512DA8;
         }
 
-        .design-2 .content {
+        .card .content {
             flex: 1;
             padding: 80px;
             display: flex;
@@ -117,105 +50,84 @@
             justify-content: center;
         }
 
-        .design-2 img {
+        .card img {
             width: 350px;
             margin-bottom: 40px;
         }
 
-        .design-2 h1 {
+        .card h1 {
             color: #333;
             font-size: 56px;
             line-height: 1.1;
             margin: 0 0 20px 0;
         }
 
-        .design-2 p {
+        .card p {
             color: #666;
             font-size: 32px;
             margin: 0;
             line-height: 1.4;
         }
 
-        .design-2 .highlight {
+        .card .highlight {
             color: #512DA8;
             font-weight: bold;
         }
 
-        /* DESIGN 3: Minimalist with Border */
-        .design-3 {
-            background: #fff;
-            border: 20px solid #512DA8;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .design-3::before {
-            content: '';
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            right: 20px;
-            bottom: 20px;
-            border: 5px solid #FFC107;
-            pointer-events: none;
-        }
-
-        .design-3 img {
-            width: 500px;
-        }
-
-        .design-3 .tagline {
-            position: absolute;
-            bottom: 60px;
-            font-size: 36px;
-            color: #512DA8;
+        .download-btn {
+            padding: 15px 40px;
+            font-size: 20px;
+            background-color: #512DA8;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-decoration: none;
             font-weight: bold;
-            background: white;
-            padding: 0 20px;
+            box-shadow: 0 4px 10px rgba(81, 45, 168, 0.3);
+        }
+
+        .download-btn:hover {
+            background-color: #6a3abf;
+            transform: translateY(-2px);
         }
     </style>
 </head>
 
 <body>
 
-    <div>
-        <div class="label">Design 1: Premium Brand (Dark)</div>
-        <div class="card-container">
-            <div class="card design-1">
-                <div class="bg-pattern"></div>
+    <div class="card-wrapper" id="capture-area">
+        <div class="card">
+            <div class="left-bar"></div>
+            <div class="content">
                 <!-- Using Logo.png from public folder -->
                 <img src="/Logo.png" alt="Logo">
-                <h1>Building Life Skills & Resilience<br>in Children</h1>
-                <div class="domain">thestarrypath.com</div>
+                <h1>Empower your child's <span class="highlight">emotional intelligence.</span></h1>
+                <p>Practical tools for resilience and lifelong habits of mind.</p>
             </div>
         </div>
     </div>
 
-    <div>
-        <div class="label">Design 2: Editorial / Professional (Light)</div>
-        <div class="card-container">
-            <div class="card design-2">
-                <div class="left-bar"></div>
-                <div class="content">
-                    <img src="/Logo.png" alt="Logo">
-                    <h1>Empower your child's <span class="highlight">emotional intelligence.</span></h1>
-                    <p>Practical tools for resilience and lifelong habits of mind.</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <button onclick="downloadCard()" class="download-btn">Download Social Card Image</button>
 
-    <div>
-        <div class="label">Design 3: Clean & Bold</div>
-        <div class="card-container">
-            <div class="card design-3">
-                <img src="/Logo.png" alt="Logo">
-                <div class="tagline">Resilience • Emotional IQ • Habits of Mind</div>
-            </div>
-        </div>
-    </div>
+    <script>
+        function downloadCard() {
+            const cardElement = document.querySelector('.card-wrapper');
 
+            html2canvas(cardElement, {
+                scale: 1, // Ensure 1:1 scale for 1200x630
+                useCORS: true,
+                allowTaint: true,
+                backgroundColor: null // Capture transparency if any
+            }).then(canvas => {
+                const link = document.createElement('a');
+                link.download = 'social-card.png';
+                link.href = canvas.toDataURL('image/png');
+                link.click();
+            });
+        }
+    </script>
 </body>
 
 </html>
