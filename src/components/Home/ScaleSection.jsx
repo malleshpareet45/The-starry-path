@@ -25,12 +25,12 @@ const ScaleSection = () => {
     const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
 
     return (
-        <section className="py-12 md:py-20 px-4 max-w-[1400px] mx-auto text-center relative min-h-[60vh] md:min-h-[85vh] flex flex-col justify-center">
-            <h2 className="text-[#0d2b45] font-[var(--font-heading)] text-3xl md:text-5xl mb-8 md:mb-16 uppercase tracking-wide" data-aos="fade-up">
+        <section className="py-12 md:py-20 px-4 max-w-[1200px] mx-auto text-center relative min-h-[50vh] md:min-h-[75vh] flex flex-col justify-center">
+            <h2 className="text-[#0d2b45] font-[var(--font-heading)] text-2xl md:text-[2.75rem] mb-6 md:mb-12 uppercase tracking-wide px-2" data-aos="fade-up">
                 ACADEMICS + LIFE SKILLS = REAL EDUCATION
             </h2>
 
-            <div className="relative w-full max-w-[1000px] mx-auto min-h-[300px] md:min-h-[500px] flex items-end justify-center mb-0" data-aos="zoom-in">
+            <div className="relative w-full max-w-[900px] mx-auto min-h-[250px] md:min-h-[500px] flex items-end justify-center mb-4" data-aos="zoom-in">
 
                 {/* Slides */}
                 {slides.map((slide, index) => (
@@ -43,23 +43,21 @@ const ScaleSection = () => {
                             <img
                                 src={slide}
                                 alt={`Balance Scale Visualization ${index + 1}`}
-                                className={`w-full h-full object-contain ${index === 0 ? 'mb-[-1.7rem] md:mb-[-2.2rem]' : index === 1 ? 'mb-[-2.1rem] md:mb-[-2.9rem]' : index === 3 ? 'mb-[-3rem] md:mb-[-4rem]' : 'mb-[-2.4rem] md:mb-[-3.4rem]'} ${index === currentIndex ? 'animate-seesaw' : ''}`}
-                                style={{ maxHeight: '400px' }}
+                                className={`w-full h-full object-contain ${index === 0 ? 'mb-[-1.5rem] md:mb-[-2.4rem]' : index === 1 ? 'mb-[-1.9rem] md:mb-[-3.2rem]' : index === 3 ? 'mb-[-2.5rem] md:mb-[-4.2rem]' : 'mb-[-2.1rem] md:mb-[-3.6rem]'} ${index === currentIndex ? 'animate-seesaw' : ''}`}
+                                style={{ maxHeight: '450px' }}
                             />
                         </div>
 
                         {/* Purple Bar - Unique for each slide (same text) */}
-                        <div className="relative w-full max-w-[800px] z-10">
-                            <div className="bg-[#512DA8] text-white py-3 px-6 rounded-2xl w-full text-center shadow-lg">
-                                <span className="font-[var(--font-heading)] uppercase tracking-wider text-sm md:text-base">
+                        <div className="relative w-full max-w-[700px] z-10 px-2 md:px-0">
+                            <div className="bg-[#512DA8] text-white py-2 md:py-3.5 px-4 md:px-8 rounded-xl md:rounded-2xl w-full text-center shadow-2xl flex items-center justify-center">
+                                <span className="font-[var(--font-heading)] uppercase tracking-wider text-xs md:text-lg leading-tight">
                                     HABITS OF MIND FOR REAL-LIFE LEARNING
                                 </span>
                             </div>
                         </div>
                     </div>
                 ))}
-
-
             </div>
 
 

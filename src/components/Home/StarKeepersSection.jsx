@@ -2,7 +2,7 @@ import React from 'react';
 
 const StarKeepersSection = () => {
     return (
-        <section className="bg-[#002E5D] text-white py-16 px-4 rounded-[30px] mx-auto max-w-[1200px] my-16 relative overflow-visible">
+        <section className="bg-[#002E5D] text-white py-12 md:py-16 px-4 rounded-[20px] md:rounded-[30px] mx-4 md:mx-auto max-w-[1200px] my-8 md:my-16 relative overflow-visible shadow-2xl">
             <div className="flex flex-col md:flex-row items-center justify-center gap-12 max-w-5xl mx-auto">
 
                 {/* Left: Umbrella Image Container */}
@@ -50,7 +50,7 @@ const StarKeepersSection = () => {
                         </svg>
                     </div>
                     {/* Button overlapping the bottom of the card */}
-                    <div className="relative -mt-20 z-20">
+                    <div className="relative -mt-10 md:-mt-20 z-20 flex justify-center md:block">
                         <button className="btn-join uppercase whitespace-nowrap text-sm px-8 py-3 shadow-md" style={{ borderRadius: '10px' }}>
                             READ OUR STORY
                         </button>
@@ -58,11 +58,11 @@ const StarKeepersSection = () => {
                 </div>
 
                 {/* Right: Text Content */}
-                <div className="flex-1 text-left md:pl-8 text-white" data-aos="fade-left">
-                    <h2 className="font-[var(--font-heading)] text-4xl mb-6 uppercase leading-tight">
-                        MEET<br />THE STAR KEEPERS
+                <div className="flex-1 text-center md:text-left md:pl-8 text-white" data-aos="fade-left">
+                    <h2 className="font-[var(--font-heading)] text-3xl md:text-4xl mb-4 md:mb-6 uppercase leading-tight">
+                        MEET THE STAR KEEPERS
                     </h2>
-                    <p className="font-[var(--font-accent)] text-lg leading-relaxed max-w-md opacity-90">
+                    <p className="font-[var(--font-accent)] text-base md:text-lg leading-relaxed max-w-md mx-auto md:mx-0 opacity-90">
                         Created by an experienced teacher with a background in psychology, The Starry Path blends child development research with intentional, engaging learning.
                     </p>
                 </div>

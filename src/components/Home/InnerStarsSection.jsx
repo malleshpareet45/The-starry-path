@@ -17,15 +17,14 @@ const InnerStarsSection = () => {
                 </div>
 
                 {/* Right Content - Skills Card */}
-                <div className="w-full flex justify-end" data-aos="fade-left">
+                <div className="w-full flex justify-center md:justify-end" data-aos="fade-left">
                     <div
-                        className="bg-[#4DB6AC] text-white p-12 rounded-[40px] max-w-md w-full relative"
-                        style={{ boxShadow: '0 20px 50px rgba(0, 0, 0, 0.15)' }}
+                        className="bg-[#4DB6AC] text-white p-6 md:p-12 rounded-[30px] md:rounded-[40px] max-w-md w-full relative shadow-2xl"
                     >
-                        <h3 className="font-[var(--font-heading)] text-2xl mb-8 uppercase tracking-wide">
+                        <h3 className="font-[var(--font-heading)] text-xl md:text-2xl mb-6 md:mb-8 uppercase tracking-wide">
                             SKILLS CHILDREN LEARN
                         </h3>
-                        <ul className="space-y-4 text-lg font-[var(--font-accent)]">
+                        <ul className="space-y-3 md:space-y-4 text-base md:text-lg font-[var(--font-accent)]">
                             <li className="flex items-start gap-3">
                                 <span className="text-white mt-1.5 text-[0.6rem]">•</span>
                                 <span>what's within their control</span>

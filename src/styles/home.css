@@ -156,8 +156,8 @@
     }
 
     .big-ideas-cta {
-        margin-top: -2rem !important;
-        /* Less negative margin on mobile */
+        margin-top: 0 !important;
+        /* No overlap on mobile */
     }
 }
 

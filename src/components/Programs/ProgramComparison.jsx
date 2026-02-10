@@ -3,7 +3,7 @@ import PuzzleImg from '../../assets/images/Programs/Puzzle.svg';
 
 const ProgramComparison = () => {
     return (
-        <section className="max-w-7xl mx-auto px-6 py-20 text-center">
+        <section className="max-w-7xl mx-auto px-6 py-12 text-center">
             <h2 className="text-3xl md:text-4xl font-[var(--font-heading)] text-[#673AB7] mb-12 uppercase">
                 WHICH PROGRAM IS RIGHT FOR YOUR CHILD?
             </h2>
@@ -19,7 +19,7 @@ const ProgramComparison = () => {
                 </svg>
             </div>
 
-            <div className="max-w-3xl mx-auto my-16 divide-y divide-gray-200 border-t border-gray-200" data-aos="fade-up">
+            <div className="max-w-3xl mx-auto my-8 divide-y divide-gray-200 border-t border-gray-200" data-aos="fade-up">
                 <div className="py-6">
                     <h5 className="text-xl font-[var(--font-heading)] text-[#0A1F44] uppercase">SOME CHILDREN BENEFIT FROM BOTH</h5>
                 </div>

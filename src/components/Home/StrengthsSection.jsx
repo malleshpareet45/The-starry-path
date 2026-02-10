@@ -57,29 +57,29 @@ const StrengthsSection = () => {
                 Values of life that define thoughts and actions.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12" data-aos="fade-up" data-aos-delay="200">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12 items-start" data-aos="fade-up" data-aos-delay="200">
                 {strengths.map((s, index) => (
                     <div
                         key={index}
-                        className="flip-card h-[200px] md:h-[240px] mx-auto w-full max-w-[350px]"
+                        className="flip-card mx-auto w-full max-w-[350px]"
                         style={{ perspective: '1000px' }}
                     >
                         <div className="flip-card-inner relative w-full h-full transition-transform duration-700 ease-in-out" style={{ transformStyle: 'preserve-3d' }}>
                             {/* Front of card */}
                             <div
-                                className="flip-card-front absolute w-full h-full flex items-center justify-center bg-transparent"
+                                className="flip-card-front relative w-full h-auto"
                                 style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
                             >
                                 <img
                                     src={s.img}
                                     alt={s.title}
-                                    className="w-full h-full object-contain p-4"
+                                    className="w-full h-auto block drop-shadow-2xl"
                                 />
                             </div>
 
                             {/* Back of card */}
                             <div
-                                className="flip-card-back absolute w-full h-full flex flex-col items-center justify-center p-6 rounded-2xl text-white shadow-lg"
+                                className="flip-card-back absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center p-6 rounded-2xl text-white shadow-2xl"
                                 style={{
                                     backfaceVisibility: 'hidden',
                                     WebkitBackfaceVisibility: 'hidden',
@@ -99,9 +99,11 @@ const StrengthsSection = () => {
                 ))}
             </div>
 
-            <button className="btn-join uppercase text-sm md:text-xl px-6 py-3 md:px-12 md:py-4" data-aos="zoom-in" data-aos-offset="100">
-                HELP YOUR CHILD BUILD LIFELONG STRENGTHS
-            </button>
+            <div className="flex justify-center mb-8 md:mb-16 px-4" data-aos="zoom-in" data-aos-offset="100">
+                <button className="btn-join uppercase text-sm md:text-2xl px-6 py-3 md:px-12 md:py-4 w-full md:w-auto rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+                    HELP YOUR CHILD BUILD LIFELONG STRENGTHS
+                </button>
+            </div>
 
             <style>{`
                 .flip-card:hover .flip-card-inner {
