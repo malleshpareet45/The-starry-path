@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin
 Disallow: /dashboard
 
-Sitemap: https://thestarrypath.com/sitemap.xml
+Sitemap: https://the-starry-path.vercel.app/sitemap.xml
