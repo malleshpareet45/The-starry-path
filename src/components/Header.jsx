@@ -27,7 +27,7 @@ const Header = () => {
                     <ul>
                         <li><span className="nav-disabled">Story</span></li>
                         <li><Link to="/programs" onClick={() => setIsMenuOpen(false)}>Programs</Link></li>
-                        <li><Link to="/resources" onClick={() => setIsMenuOpen(false)}>Resources</Link></li>
+                        <li><span className="nav-disabled">Resources</span></li>
                         <li className="mobile-cta">
                             <button className="btn-join">Book now</button>
                         </li>
