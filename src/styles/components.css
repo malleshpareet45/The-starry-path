@@ -34,7 +34,8 @@
     margin-left: auto;
 }
 
-.nav-menu a {
+.nav-menu a,
+.nav-disabled {
     color: var(--color-purple);
     text-decoration: none;
     font-weight: 700;
@@ -42,6 +43,14 @@
     font-family: var(--font-accent);
     text-transform: capitalize;
     transition: color 0.3s ease;
+}
+
+.nav-menu a {
+    cursor: pointer;
+}
+
+.nav-disabled {
+    cursor: default;
 }
 
 .nav-menu a:hover {
@@ -129,7 +138,8 @@
         gap: 2.5rem;
     }
 
-    .nav-menu a {
+    .nav-menu a,
+    .nav-disabled {
         font-size: 1.5rem;
     }
 

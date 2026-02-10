@@ -25,7 +25,7 @@ const Header = () => {
 
                 <nav className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
                     <ul>
-                        <li><Link to="/story" onClick={() => setIsMenuOpen(false)}>Story</Link></li>
+                        <li><span className="nav-disabled">Story</span></li>
                         <li><Link to="/programs" onClick={() => setIsMenuOpen(false)}>Programs</Link></li>
                         <li><Link to="/resources" onClick={() => setIsMenuOpen(false)}>Resources</Link></li>
                         <li className="mobile-cta">
