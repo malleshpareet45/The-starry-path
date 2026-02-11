@@ -9,25 +9,29 @@ import { useLocation } from 'react-router-dom';
 const MainLayout = ({ children }) => {
     const location = useLocation();
     // Default to true on initial load
-    // Default to true on initial load, unless on /programs
-    const [loading, setLoading] = useState(location.pathname !== '/programs');
+    const [loading, setLoading] = useState(true);
     const showExploreSection = location.pathname !== '/programs';
 
     useEffect(() => {
-        // specific check for programs page to avoid loader
-        if (location.pathname === '/programs') {
-            setLoading(false);
-            return;
-        }
+        window.scrollTo(0, 0);
 
         // Trigger loading on mount and route change
         setLoading(true);
+
+        // Show loading in tab title
+        const originalTitle = document.title;
+        document.title = "Loading... | The Starry Path";
+
         const timer = setTimeout(() => {
             setLoading(false);
+            document.title = originalTitle;
         }, 800); // 800ms delay for smooth transition
 
-        return () => clearTimeout(timer);
-    }, [location.pathname]);
+        return () => {
+            clearTimeout(timer);
+            document.title = originalTitle;
+        };
+    }, [location]);
 
     return (
         <div className="main-layout relative">
