@@ -25,7 +25,7 @@ const ScaleSection = () => {
     const prevSlide = () => setCurrentIndex((prev) => (prev - 1 + slides.length) % slides.length);
 
     return (
-        <section className="py-12 md:py-20 px-4 max-w-[1200px] mx-auto text-center relative min-h-[50vh] md:min-h-[75vh] flex flex-col justify-center overflow-hidden">
+        <section className="scale-section py-12 md:py-20 px-4 max-w-[1200px] mx-auto text-center relative min-h-[50vh] md:min-h-[75vh] flex flex-col justify-center overflow-hidden">
             <h2 className="text-[#0d2b45] font-[var(--font-heading)] text-xl md:text-[2.75rem] mb-6 md:mb-12 uppercase tracking-wide px-2 w-full" data-aos="fade-up">
                 ACADEMICS + LIFE SKILLS = REAL EDUCATION
             </h2>
@@ -43,7 +43,7 @@ const ScaleSection = () => {
                             <img
                                 src={slide}
                                 alt={`Balance Scale Visualization ${index + 1}`}
-                                className={`w-full h-full object-contain ${index === 0 ? 'mb-[-1.5rem] md:mb-[-2.4rem]' : index === 1 ? 'mb-[-1.9rem] md:mb-[-3.2rem]' : index === 3 ? 'mb-[-2.5rem] md:mb-[-4.2rem]' : 'mb-[-2.1rem] md:mb-[-3.6rem]'} ${index === currentIndex ? 'animate-seesaw' : ''}`}
+                                className={`w-full h-auto object-contain align-bottom ${index === 0 ? 'mb-[-1.5rem] md:mb-[-2.6rem]' : index === 1 ? 'mb-[-1.9rem] md:mb-[-3.6rem]' : index === 3 ? 'mb-[-2.8rem] md:mb-[-4.9rem]' : 'mb-[-2.2rem] md:mb-[-4.0rem]'} ${index === currentIndex ? 'animate-seesaw' : ''}`}
                                 style={{ maxHeight: '450px' }}
                             />
                         </div>
@@ -59,21 +59,6 @@ const ScaleSection = () => {
                     </div>
                 ))}
             </div>
-
-
-
-            <style>{`
-                @keyframes seesaw {
-                    0% { transform: rotate(0deg); }
-                    25% { transform: rotate(-1.5deg); }
-                    75% { transform: rotate(1.5deg); }
-                    100% { transform: rotate(0deg); }
-                }
-                .animate-seesaw {
-                    animation: seesaw 6s ease-in-out infinite;
-                    transform-origin: center bottom;
-                }
-            `}</style>
         </section>
     );
 };

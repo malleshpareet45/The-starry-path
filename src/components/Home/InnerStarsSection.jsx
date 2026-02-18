@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Tangle from '../../assets/images/Homepage/Tangle.svg';
 
 const InnerStarsSection = () => {
@@ -24,28 +25,34 @@ const InnerStarsSection = () => {
                         <h3 className="font-[var(--font-heading)] text-xl md:text-2xl mb-6 md:mb-8 uppercase tracking-wide">
                             SKILLS CHILDREN LEARN
                         </h3>
-                        <ul className="space-y-3 md:space-y-4 text-base md:text-lg font-[var(--font-accent)]">
-                            <li className="flex items-start gap-3">
-                                <span className="text-white mt-1.5 text-[0.6rem]">•</span>
-                                <span>what's within their control</span>
+                        <ul className="space-y-4 md:space-y-6 text-base md:text-lg font-[var(--font-accent)]">
+                            <li className="flex items-start gap-4">
+                                <span className="text-white mt-1 text-xl leading-none flex-shrink-0">•</span>
+                                <span className="leading-tight">what's within their control</span>
                             </li>
-                            <li className="flex items-start gap-3">
-                                <span className="text-white mt-1.5 text-[0.6rem]">•</span>
-                                <span>how effort and focus work</span>
+                            <li className="flex items-start gap-4">
+                                <span className="text-white mt-1 text-xl leading-none flex-shrink-0">•</span>
+                                <span className="leading-tight">how effort and focus work</span>
                             </li>
-                            <li className="flex items-start gap-3">
-                                <span className="text-white mt-1.5 text-[0.6rem]">•</span>
-                                <span>how emotions shape decisions</span>
+                            <li className="flex items-start gap-4">
+                                <span className="text-white mt-1 text-xl leading-none flex-shrink-0">•</span>
+                                <span className="leading-tight">how emotions shape decisions</span>
                             </li>
-                            <li className="flex items-start gap-3">
-                                <span className="text-white mt-1.5 text-[0.6rem]">•</span>
-                                <span>how to choose helpful thoughts</span>
+                            <li className="flex items-start gap-4">
+                                <span className="text-white mt-1 text-xl leading-none flex-shrink-0">•</span>
+                                <span className="leading-tight">how to choose helpful thoughts</span>
                             </li>
-                            <li className="flex items-start gap-3">
-                                <span className="text-white mt-1.5 text-[0.6rem]">•</span>
-                                <span>how to respond thoughtfully</span>
+                            <li className="flex items-start gap-4">
+                                <span className="text-white mt-1 text-xl leading-none flex-shrink-0">•</span>
+                                <span className="leading-tight">how to respond thoughtfully</span>
                             </li>
                         </ul>
+
+                        <div className="mt-8">
+                            <Link to="/programs" className="bg-white text-[#4DB6AC] font-[var(--font-heading)] uppercase text-sm md:text-lg px-6 py-2 rounded-full shadow-md hover:bg-gray-100 transition-all duration-300 no-underline inline-block">
+                                Learn more
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>

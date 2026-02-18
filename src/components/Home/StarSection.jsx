@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Star from '../../assets/images/Homepage/Star.svg';
 
 const StarSection = () => {
@@ -21,27 +22,28 @@ const StarSection = () => {
                         WHAT CHILDREN LEARN<br />(AGES 5-12)
                     </h2>
                     <ul className="space-y-4 text-gray-500 font-[var(--font-accent)] text-lg">
-                        <li className="flex items-start gap-3">
-                            <span className="text-gray-400 text-sm mt-1.5">•</span>
-                            <span>Respond when things feel hard</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            <span className="text-gray-400 text-sm mt-1.5">•</span>
-                            <span>Keep trying when learning is challenging</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            <span className="text-gray-400 text-sm mt-1.5">•</span>
-                            <span>Build and maintain healthy relationships</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            <span className="text-gray-400 text-sm mt-1.5">•</span>
-                            <span>Make thoughtful choices</span>
-                        </li>
-                        <li className="flex items-start gap-3">
-                            <span className="text-gray-400 text-sm mt-1.5">•</span>
-                            <span>Develop habits of mind that support long-term learning</span>
-                        </li>
+                        {[
+                            "Respond when things feel hard",
+                            "Identify what’s within their control",
+                            "Understand how effort and focus work",
+                            "Keep trying when learning is challenging",
+                            "Acknowledge how emotions shape decisions",
+                            "Build and maintain healthy relationships",
+                            "How to choose helpful thoughts",
+                            "Develop habits of mind that support long-term learning"
+                        ].map((item, index) => (
+                            <li key={index} className="flex items-start gap-3">
+                                <span className="text-gray-400 text-sm mt-1.5">•</span>
+                                <span>{item}</span>
+                            </li>
+                        ))}
                     </ul>
+
+                    <div className="mt-10">
+                        <Link to="/programs" className="btn-join inline-block uppercase text-sm md:text-xl px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 no-underline">
+                            Learn more
+                        </Link>
+                    </div>
                 </div>
             </div>
         </section>

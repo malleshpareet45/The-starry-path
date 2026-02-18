@@ -40,13 +40,33 @@
 
 /* Scale Section */
 .scale-section {
-    text-align: center;
+    width: 100%;
+    overflow: hidden;
 }
 
-.scale-container {
-    /* TODO: Implement scale layout */
-    margin: 2rem 0;
+@keyframes seesaw {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-1.5deg);
+    }
+
+    75% {
+        transform: rotate(1.5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
+
+.animate-seesaw {
+    animation: seesaw 6s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+
 
 /* Star Section */
 .star-section {

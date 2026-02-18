@@ -30,22 +30,22 @@ const DifferenceSection = () => {
                         <h3 className="font-[var(--font-heading)] text-2xl uppercase mb-6">
                             THE FOCUS IS ON
                         </h3>
-                        <ul className="space-y-4 font-[var(--font-accent)] text-lg">
-                            <li className="flex items-start gap-3">
-                                <span className="text-[#0d2b45] mt-1.5 text-[0.6rem]">•</span>
-                                <span>Understanding self and thinking frameworks</span>
+                        <ul className="space-y-4 font-[var(--font-accent)] text-lg text-[#0d2b45]">
+                            <li className="flex items-start gap-4">
+                                <span className="text-[#0d2b45] mt-1 text-xl leading-none flex-shrink-0">•</span>
+                                <span className="leading-tight">Understanding self and thinking frameworks</span>
                             </li>
-                            <li className="flex items-start gap-3">
-                                <span className="text-[#0d2b45] mt-1.5 text-[0.6rem]">•</span>
-                                <span>Evidence-aligned tools that turn research into everyday practice</span>
+                            <li className="flex items-start gap-4">
+                                <span className="text-[#0d2b45] mt-1 text-xl leading-none flex-shrink-0">•</span>
+                                <span className="leading-tight">Evidence-aligned tools that turn research into everyday practice</span>
                             </li>
-                            <li className="flex items-start gap-3">
-                                <span className="text-[#0d2b45] mt-1.5 text-[0.6rem]">•</span>
-                                <span>Healthy habits of mind</span>
+                            <li className="flex items-start gap-4">
+                                <span className="text-[#0d2b45] mt-1 text-xl leading-none flex-shrink-0">•</span>
+                                <span className="leading-tight">Healthy habits of mind</span>
                             </li>
-                            <li className="flex items-start gap-3">
-                                <span className="text-[#0d2b45] mt-1.5 text-[0.6rem]">•</span>
-                                <span>Skills that sustain learning far beyond the classroom</span>
+                            <li className="flex items-start gap-4">
+                                <span className="text-[#0d2b45] mt-1 text-xl leading-none flex-shrink-0">•</span>
+                                <span className="leading-tight">Skills that sustain learning far beyond the classroom</span>
                             </li>
                         </ul>
                     </div>
@@ -55,7 +55,7 @@ const DifferenceSection = () => {
 
             <div className="flex justify-center mb-8 md:mb-16 px-4" data-aos="zoom-in">
                 <button className="btn-join uppercase text-sm md:text-2xl px-6 py-3 md:px-12 md:py-4 w-full md:w-auto rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
-                    EXPLORE THE STORY PATH SYSTEM
+                    OUR JOURNEY
                 </button>
             </div>
         </React.Fragment>

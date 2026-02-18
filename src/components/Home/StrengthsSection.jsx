@@ -13,44 +13,44 @@ const StrengthsSection = () => {
         {
             img: BounceBack,
             title: "Bounce Back",
-            description: "RESILIENCE\nLearn to overcome challenges and bounce back from setbacks with strength and determination.",
+            description: "RESILIENCE\nGrowing through challenges.",
             bgColor: "#F5A623"
         },
         {
             img: StandTall,
             title: "Stand Tall",
-            description: "COURAGE\nStand up for what's right and face fears with confidence and bravery.",
+            description: "COURAGE\nTrying even when afraid.",
             bgColor: "#8BC34A"
-        },
-        {
-            img: ChooseKind,
-            title: "Choose Kind",
-            description: "PERSEVERANCE\nKeep going even when things get tough, never giving up on your goals.",
-            bgColor: "#FF5722"
         },
         {
             img: KeepGoing,
             title: "Keep Going",
-            description: "KINDNESS AND EMPATHY\nShow compassion to others and understand their feelings and perspectives.",
+            description: "PERSEVERANCE\nTrying when it's hard.",
+            bgColor: "#FF5722"
+        },
+        {
+            img: ChooseKind,
+            title: "Choose Kind",
+            description: "KINDNESS AND EMPATHY\nShowing compassion for self & others.",
             bgColor: "#673AB7"
         },
         {
             img: FindTheGood,
             title: "Find the Good",
-            description: "GRATITUDE\nAppreciate the good things in life and express thankfulness.",
+            description: "GRATITUDE\nNoticing what is good.",
             bgColor: "#E91E63"
         },
         {
             img: StayTrue,
             title: "Stay True",
-            description: "HONESTY AND INTEGRITY\nBe truthful and act with strong moral principles in all situations.",
+            description: "HONESTY AND INTEGRITY\nMaking choices that feel right.",
             bgColor: "#4DB6AC"
         }
     ];
 
     return (
         <section className="py-12 md:py-20 px-4 max-w-[1200px] mx-auto text-center">
-            <h2 className="text-2xl md:text-[2.5rem] text-[var(--color-primary-blue)] mb-4 uppercase font-[var(--font-heading)] leading-tight" data-aos="fade-up">
+            <h2 className="text-2xl md:text-[2.5rem] text-[var(--color-navy)] mb-4 uppercase font-[var(--font-heading)] leading-tight" data-aos="fade-up">
                 SIX ESSENTIAL STRENGTHS<br />THAT SHAPE CHARACTER
             </h2>
             <p className="text-base md:text-lg text-gray-600 mb-8 md:mb-12 font-[var(--font-accent)]" data-aos="fade-up" data-aos-delay="100">
@@ -62,14 +62,10 @@ const StrengthsSection = () => {
                     <div
                         key={index}
                         className="flip-card mx-auto w-full max-w-[320px] px-2"
-                        style={{ perspective: '1000px' }}
                     >
-                        <div className="flip-card-inner relative w-full h-full transition-transform duration-700 ease-in-out" style={{ transformStyle: 'preserve-3d' }}>
+                        <div className="flip-card-inner">
                             {/* Front of card */}
-                            <div
-                                className="flip-card-front relative w-full h-auto"
-                                style={{ backfaceVisibility: 'hidden', WebkitBackfaceVisibility: 'hidden' }}
-                            >
+                            <div className="flip-card-front">
                                 <img
                                     src={s.img}
                                     alt={s.title}
@@ -79,17 +75,12 @@ const StrengthsSection = () => {
 
                             {/* Back of card */}
                             <div
-                                className="flip-card-back absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center p-6 rounded-2xl text-white shadow-2xl"
-                                style={{
-                                    backfaceVisibility: 'hidden',
-                                    WebkitBackfaceVisibility: 'hidden',
-                                    transform: 'rotateY(180deg)',
-                                    backgroundColor: s.bgColor
-                                }}
+                                className="flip-card-back shadow-2xl"
+                                style={{ backgroundColor: s.bgColor }}
                             >
                                 <div className="text-center">
-                                    <h3 className="text-xl font-bold font-[var(--font-heading)]">{s.description.split('\n')[0]}</h3>
-                                    <p className="text-sm md:text-base font-[var(--font-body)] leading-relaxed mt-2">
+                                    <h3 className="text-xl md:text-2xl font-bold font-[var(--font-heading)] text-white">{s.description.split('\n')[0]}</h3>
+                                    <p className="text-base md:text-lg font-[var(--font-body)] leading-relaxed mt-2 text-white">
                                         {s.description.split('\n')[1] || ""}
                                     </p>
                                 </div>
@@ -104,12 +95,6 @@ const StrengthsSection = () => {
                     HELP YOUR CHILD BUILD LIFELONG STRENGTHS
                 </button>
             </div>
-
-            <style>{`
-                .flip-card:hover .flip-card-inner {
-                    transform: rotateY(180deg);
-                }
-            `}</style>
         </section>
     );
 };

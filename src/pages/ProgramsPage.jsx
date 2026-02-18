@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import '../styles/programs.css';
 
 // Import Components
 import ProgramsHero from '../components/Programs/ProgramsHero';
@@ -15,7 +16,7 @@ const ProgramsPage = () => {
     }, []);
 
     return (
-        <div className="w-full bg-[var(--color-bg)]">
+        <div className="programs-page">
             <ProgramsHero />
             <InnerStarsProgram />
             <LearningStarsProgram />

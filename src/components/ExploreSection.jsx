@@ -29,25 +29,33 @@ const ExploreSection = () => {
                         />
                     </defs>
 
-                    {/* 📝 Flowing Text - Enhanced 'moving effect' with faster duration and wider spacing */}
+                    {/* 📝 Flowing Text - Seamless Infinite Scroll */}
                     <text
                         className="wave-text"
                         dominantBaseline="middle"
-                        dy="-60"
-                        textAnchor="middle"
+                        dy="-55"
+                        style={{
+                            fontSize: '28px',
+                            letterSpacing: '8px',
+                            fontWeight: '800',
+                            textTransform: 'uppercase',
+                            fontFamily: 'Quicksand, sans-serif'
+                        }}
                     >
-                        <textPath href="#goldWavePath" startOffset="0%">
-                            {[...Array(20)].map(() => (
-                                "Learning that goes beyond the classroom  •  The habits of mind that build character  •  Build them early. Build them with intention.  •  "
-                            )).join('')}
-
+                        <textPath href="#goldWavePath">
+                            {[...Array(6)].map((_, i) => (
+                                <React.Fragment key={i}>
+                                    <tspan fill="var(--color-navy)">Learning that goes beyond the classroom.{"\u00A0\u00A0\u00A0\u00A0"} </tspan>
+                                    <tspan fill="var(--color-navy)">The habits of mind that build character.{"\u00A0\u00A0\u00A0\u00A0"} </tspan>
+                                    <tspan fill="var(--color-navy)">Build them early. Build them with intention.{"\u00A0\u00A0\u00A0\u00A0"} </tspan>
+                                </React.Fragment>
+                            ))}
                             <animate
                                 attributeName="startOffset"
                                 from="-100%"
                                 to="0%"
-                                dur="25s"
+                                dur="40s"
                                 repeatCount="indefinite"
-                                calcMode="linear"
                             />
                         </textPath>
                     </text>
@@ -56,7 +64,7 @@ const ExploreSection = () => {
 
                 {/* 🔘 Button */}
                 <button className="footer-wave-button">
-                    EXPLORE THE STARRY PATH SYSTEM
+                    OUR JOURNEY
                 </button>
 
             </div>

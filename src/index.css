@@ -6,37 +6,7 @@
 @tailwind utilities;
 
 /* Add your global styles here */
-@font-face {
-  font-family: 'Chewy';
-  src: url('./assets/fonts/Chewy-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: 'Nunito';
-  src: url('./assets/fonts/Nunito-VariableFont_wght.ttf') format('truetype');
-  font-weight: 100 900;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Quicksand';
-  src: url('./assets/fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
-  font-weight: 300 700;
-  font-style: normal;
-}
-
-:root {
-  --color-primary-orange: #F5A623;
-  --color-primary-pink: #E91E63;
-  --color-primary-purple: #673AB7;
-  --color-primary-blue: #03A9F4;
-  --color-bg-cream: #000000;
-  --font-heading: 'Chewy', cursive;
-  --font-body: 'Quicksand', sans-serif;
-  --font-accent: 'Nunito', sans-serif;
-}
 
 * {
   box-sizing: border-box;
@@ -54,6 +24,8 @@ html,
 
 body {
   font-family: var(--font-body);
+  font-size: 1.125rem;
+  line-height: 1.7;
   background-color: var(--color-bg);
   color: var(--color-text);
   overflow-x: hidden;

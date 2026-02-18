@@ -1,3 +1,17 @@
+@font-face {
+  font-family: 'Nunito';
+  src: url('../assets/fonts/Nunito-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('../assets/fonts/Quicksand-VariableFont_wght.ttf') format('truetype');
+  font-weight: 300 700;
+  font-style: normal;
+}
+
 :root {
   /* Colors */
   --color-orange: #F5A623;
@@ -5,18 +19,26 @@
   --color-purple: #673AB7;
   --color-blue: #03A9F4;
   --color-green: #8BC34A;
+  --color-cyan: #00E5FF;
+  --color-navy: #0A1F44;
+  --color-cream: #FAF6F2;
 
   --color-bg: #FFFFFF;
   --color-text: #333333;
 
   /* Fonts */
-  --font-heading: 'Chewy', cursive;
+  --font-heading: 'Quicksand', sans-serif;
   --font-body: 'Quicksand', sans-serif;
   --font-accent: 'Nunito', sans-serif;
 }
 
+
 body {
   font-family: var(--font-body);
+  font-size: 1.125rem;
+  /* 18px BASE */
+  line-height: 1.7;
+  /* Improved breathing room */
   background-color: var(--color-bg);
   color: var(--color-text);
   margin: 0;
