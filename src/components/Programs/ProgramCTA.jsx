@@ -4,7 +4,7 @@ import "../../styles/components.css";
 
 const ProgramCTA = () => {
     return (
-        <section className="explore-section mt-4 mb-12">
+        <section className="explore-section mt-4 mb-12 hidden md:block">
             <div className="footer-wave-container">
 
                 {/* 🌊 Background Wave */}

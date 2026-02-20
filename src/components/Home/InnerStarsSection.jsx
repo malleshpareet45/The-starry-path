@@ -9,10 +9,10 @@ const InnerStarsSection = () => {
 
                 {/* Left Content - Text */}
                 <div className="flex flex-col justify-center" data-aos="fade-right">
-                    <h2 className="text-[2.5rem] text-[#0d2b45] mb-6 uppercase leading-tight font-[var(--font-heading)]">
+                    <h2 className="text-[2.5rem] text-[var(--color-dark-navy)] mb-6 uppercase leading-tight font-[var(--font-heading)] font-bold">
                         WHY DOES YOUR CHILD<br />NEED INNER STARS?
                     </h2>
-                    <p className="text-lg text-gray-500 font-[var(--font-accent)] leading-relaxed max-w-md">
+                    <p className="text-lg font-[var(--font-accent)] leading-relaxed max-w-md" style={{ color: '#636466' }}>
                         1 in 7 Australian children experience challenges such as anxiety, worry, or low confidence during their primary school years (ABS, 2023)
                     </p>
                 </div>
@@ -22,7 +22,7 @@ const InnerStarsSection = () => {
                     <div
                         className="bg-[#4DB6AC] text-white p-6 md:p-12 rounded-[30px] md:rounded-[40px] max-w-md w-full relative shadow-2xl"
                     >
-                        <h3 className="font-[var(--font-heading)] text-xl md:text-2xl mb-6 md:mb-8 uppercase tracking-wide">
+                        <h3 className="font-[var(--font-heading)] text-xl md:text-2xl mb-6 md:mb-8 uppercase tracking-wide font-bold">
                             SKILLS CHILDREN LEARN
                         </h3>
                         <ul className="space-y-4 md:space-y-6 text-base md:text-lg font-[var(--font-accent)]">
@@ -49,7 +49,7 @@ const InnerStarsSection = () => {
                         </ul>
 
                         <div className="mt-8">
-                            <Link to="/programs" className="bg-white text-[#4DB6AC] font-[var(--font-heading)] uppercase text-sm md:text-lg px-6 py-2 rounded-full shadow-md hover:bg-gray-100 transition-all duration-300 no-underline inline-block">
+                            <Link to="/programs" className="bg-white text-[#4DB6AC] font-bold font-[var(--font-heading)] uppercase text-sm md:text-lg px-6 py-2 rounded-full shadow-md hover:bg-gray-100 transition-all duration-300 no-underline inline-block">
                                 Learn more
                             </Link>
                         </div>

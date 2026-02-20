@@ -8,7 +8,8 @@ const Hero = () => {
                 src={BannerBox}
                 alt="The Starry Path Banner"
                 className="hero-banner"
-                data-aos="zoom-in"
+                loading="eager"
+                fetchpriority="high"
             />
         </section>
     );

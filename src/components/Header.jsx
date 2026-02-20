@@ -29,13 +29,13 @@ const Header = () => {
                         <li><Link to="/programs" onClick={() => setIsMenuOpen(false)}>Programs</Link></li>
                         <li><span className="nav-disabled">Resources</span></li>
                         <li className="mobile-cta">
-                            <button className="btn-join">Book now</button>
+                            <button className="btn-join font-bold">Book now</button>
                         </li>
                     </ul>
                 </nav>
 
                 <div className="cta-container">
-                    <button className="btn-join">Book now</button>
+                    <button className="btn-join font-bold">Book now</button>
                 </div>
             </div>
         </header>

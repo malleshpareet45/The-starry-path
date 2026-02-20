@@ -14,7 +14,7 @@
 
 :root {
   /* Colors */
-  --color-orange: #F5A623;
+  --color-orange: #f04c23;
   --color-pink: #E91E63;
   --color-purple: #673AB7;
   --color-blue: #03A9F4;
@@ -30,6 +30,18 @@
   --font-heading: 'Quicksand', sans-serif;
   --font-body: 'Quicksand', sans-serif;
   --font-accent: 'Nunito', sans-serif;
+
+  /* Future Palette */
+  --color-yellow-gold: #fcb116;
+  --color-lime-green: #b0d236;
+  --color-red-orange: #f04c23;
+  --color-deep-purple: #56469c;
+  --color-hot-pink: #ed2480;
+  --color-teal: #45bfb4;
+  --color-grey-text: #636466;
+  --color-dark-navy: #122f52;
+  --color-off-white: #fff8f1;
+  --color-white: #ffffff;
 }
 
 

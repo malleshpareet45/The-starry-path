@@ -4,7 +4,7 @@ import "../styles/components.css";
 
 const ExploreSection = () => {
     return (
-        <section className="explore-section">
+        <section className="explore-section hidden md:block">
             <div className="footer-wave-container">
 
                 {/* 🌊 Background Wave */}

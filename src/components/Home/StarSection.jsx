@@ -18,10 +18,10 @@ const StarSection = () => {
 
                 {/* Right: Text Content */}
                 <div className="flex-1 text-left" data-aos="fade-left">
-                    <h2 className="text-[#0d2b45] font-[var(--font-heading)] text-3xl md:text-4xl mb-6 uppercase leading-tight">
+                    <h2 className="text-[var(--color-dark-navy)] font-[var(--font-heading)] text-3xl md:text-4xl mb-6 uppercase leading-tight font-bold">
                         WHAT CHILDREN LEARN<br />(AGES 5-12)
                     </h2>
-                    <ul className="space-y-4 text-gray-500 font-[var(--font-accent)] text-lg">
+                    <ul className="space-y-4 font-[var(--font-accent)] text-lg" style={{ color: '#636466' }}>
                         {[
                             "Respond when things feel hard",
                             "Identify what’s within their control",
@@ -33,14 +33,14 @@ const StarSection = () => {
                             "Develop habits of mind that support long-term learning"
                         ].map((item, index) => (
                             <li key={index} className="flex items-start gap-3">
-                                <span className="text-gray-400 text-sm mt-1.5">•</span>
+                                <span className="text-sm mt-1.5" style={{ color: '#636466' }}>•</span>
                                 <span>{item}</span>
                             </li>
                         ))}
                     </ul>
 
                     <div className="mt-10">
-                        <Link to="/programs" className="btn-join inline-block uppercase text-sm md:text-xl px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 no-underline">
+                        <Link to="/programs" className="btn-join inline-block uppercase text-sm md:text-xl px-8 py-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 no-underline font-bold">
                             Learn more
                         </Link>
                     </div>

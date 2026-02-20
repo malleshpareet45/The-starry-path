@@ -26,7 +26,7 @@ const ScaleSection = () => {
 
     return (
         <section className="scale-section py-12 md:py-20 px-4 max-w-[1200px] mx-auto text-center relative min-h-[50vh] md:min-h-[75vh] flex flex-col justify-center overflow-hidden">
-            <h2 className="text-[#0d2b45] font-[var(--font-heading)] text-xl md:text-[2.75rem] mb-6 md:mb-12 uppercase tracking-wide px-2 w-full" data-aos="fade-up">
+            <h2 className="text-[var(--color-dark-navy)] font-[var(--font-heading)] text-xl md:text-[2.75rem] mb-6 md:mb-12 uppercase tracking-wide px-2 w-full font-bold" data-aos="fade-up">
                 ACADEMICS + LIFE SKILLS = REAL EDUCATION
             </h2>
 
@@ -43,7 +43,7 @@ const ScaleSection = () => {
                             <img
                                 src={slide}
                                 alt={`Balance Scale Visualization ${index + 1}`}
-                                className={`w-full h-auto object-contain align-bottom ${index === 0 ? 'mb-[-1.5rem] md:mb-[-2.6rem]' : index === 1 ? 'mb-[-1.9rem] md:mb-[-3.6rem]' : index === 3 ? 'mb-[-2.8rem] md:mb-[-4.9rem]' : 'mb-[-2.2rem] md:mb-[-4.0rem]'} ${index === currentIndex ? 'animate-seesaw' : ''}`}
+                                className={`w-full h-auto object-contain align-bottom ${index === 0 ? 'mb-[-1rem] md:mb-[-2.55rem]' : index === 1 ? 'mb-[-1.9rem] md:mb-[-3.35rem]' : index === 2 ? 'mb-[-2.2rem] md:mb-[-4.0rem]' : 'mb-[-2.8rem] md:mb-[-4.9rem]'} ${index === currentIndex ? 'animate-seesaw' : ''}`}
                                 style={{ maxHeight: '450px' }}
                             />
                         </div>
@@ -51,7 +51,7 @@ const ScaleSection = () => {
                         {/* Purple Bar - Unique for each slide (same text) */}
                         <div className="relative w-full max-w-[700px] z-10 px-2 md:px-0">
                             <div className="bg-[#512DA8] text-white py-2 md:py-3.5 px-4 md:px-8 rounded-xl md:rounded-2xl w-full text-center shadow-2xl flex items-center justify-center">
-                                <span className="font-[var(--font-heading)] uppercase tracking-wider text-xs md:text-lg leading-tight">
+                                <span className="font-[var(--font-heading)] uppercase tracking-wider text-xs md:text-lg leading-tight font-bold">
                                     HABITS OF MIND FOR REAL-LIFE LEARNING
                                 </span>
                             </div>

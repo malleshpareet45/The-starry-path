@@ -14,46 +14,46 @@ const StrengthsSection = () => {
             img: BounceBack,
             title: "Bounce Back",
             description: "RESILIENCE\nGrowing through challenges.",
-            bgColor: "#F5A623"
+            bgColor: "var(--color-yellow-gold)"
         },
         {
             img: StandTall,
             title: "Stand Tall",
             description: "COURAGE\nTrying even when afraid.",
-            bgColor: "#8BC34A"
+            bgColor: "var(--color-lime-green)"
         },
         {
             img: KeepGoing,
             title: "Keep Going",
             description: "PERSEVERANCE\nTrying when it's hard.",
-            bgColor: "#FF5722"
+            bgColor: "var(--color-deep-purple)"
         },
         {
             img: ChooseKind,
             title: "Choose Kind",
             description: "KINDNESS AND EMPATHY\nShowing compassion for self & others.",
-            bgColor: "#673AB7"
+            bgColor: "var(--color-red-orange)"
         },
         {
             img: FindTheGood,
             title: "Find the Good",
             description: "GRATITUDE\nNoticing what is good.",
-            bgColor: "#E91E63"
+            bgColor: "var(--color-hot-pink)"
         },
         {
             img: StayTrue,
             title: "Stay True",
             description: "HONESTY AND INTEGRITY\nMaking choices that feel right.",
-            bgColor: "#4DB6AC"
+            bgColor: "var(--color-teal)"
         }
     ];
 
     return (
         <section className="py-12 md:py-20 px-4 max-w-[1200px] mx-auto text-center">
-            <h2 className="text-2xl md:text-[2.5rem] text-[var(--color-navy)] mb-4 uppercase font-[var(--font-heading)] leading-tight" data-aos="fade-up">
+            <h2 className="text-2xl md:text-[2.5rem] text-[var(--color-navy)] mb-4 uppercase font-[var(--font-heading)] leading-tight font-bold" data-aos="fade-up">
                 SIX ESSENTIAL STRENGTHS<br />THAT SHAPE CHARACTER
             </h2>
-            <p className="text-base md:text-lg text-gray-600 mb-8 md:mb-12 font-[var(--font-accent)]" data-aos="fade-up" data-aos-delay="100">
+            <p className="text-base md:text-lg mb-8 md:mb-12 font-[var(--font-accent)]" style={{ color: '#636466' }} data-aos="fade-up" data-aos-delay="100">
                 Values of life that define thoughts and actions.
             </p>
 
@@ -91,7 +91,7 @@ const StrengthsSection = () => {
             </div>
 
             <div className="flex justify-center mb-8 md:mb-16 px-4" data-aos="zoom-in" data-aos-offset="100">
-                <button className="btn-join uppercase text-sm md:text-2xl px-6 py-3 md:px-12 md:py-4 w-full md:w-auto rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
+                <button className="btn-join font-bold uppercase text-sm md:text-2xl px-6 py-3 md:px-12 md:py-4 w-full md:w-auto rounded-full shadow-lg hover:shadow-xl transition-all duration-300">
                     HELP YOUR CHILD BUILD LIFELONG STRENGTHS
                 </button>
             </div>

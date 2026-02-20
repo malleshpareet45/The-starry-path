@@ -4,7 +4,7 @@ import PuzzleImg from '../../assets/images/Programs/Puzzle.svg';
 const ProgramComparison = () => {
     return (
         <section className="max-w-7xl mx-auto px-6 py-12 text-center">
-            <h2 className="text-3xl md:text-4xl font-[var(--font-heading)] text-[#673AB7] mb-12 uppercase">
+            <h2 className="text-3xl md:text-4xl font-[var(--font-heading)] text-[var(--color-dark-navy)] mb-12 uppercase font-bold">
                 WHICH PROGRAM IS RIGHT FOR YOUR CHILD?
             </h2>
 
@@ -21,11 +21,11 @@ const ProgramComparison = () => {
 
             <div className="w-full max-w-3xl mx-auto my-8 divide-y divide-gray-200 border-t border-gray-200" data-aos="fade-up">
                 <div className="py-6">
-                    <h5 className="text-xl font-[var(--font-heading)] text-[#0A1F44] uppercase">SOME CHILDREN BENEFIT FROM BOTH</h5>
+                    <h5 className="text-xl font-[var(--font-heading)] text-[var(--color-dark-navy)] uppercase font-bold">SOME CHILDREN BENEFIT FROM BOTH</h5>
                 </div>
                 {["Inner Stars develops life skills and habits of mind.", "Learning Stars strengthens essential literacy skills.", "Together, they support learning at school and beyond."].map((text) => (
                     <div key={text} className="py-6">
-                        <p className="text-lg font-[var(--font-body)] text-gray-600">{text}</p>
+                        <p className="text-lg font-[var(--font-body)]" style={{ color: 'var(--color-grey-text)' }}>{text}</p>
                     </div>
                 ))}
             </div>
